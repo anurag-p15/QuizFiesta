@@ -13,7 +13,10 @@ function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav  ms-auto">
-              <li className="nav-item">
+            <li className="nav-item">
+              <a className="nav-link " style={{ textAlign: 'left',fontSize: '14px' }}href="#">Quiz Section</a>
+            </li>
+            <li className="nav-item">
               <a className="nav-link " style={{ textAlign: 'left',fontSize: '14px' }}href="#">About Quiz Fiesta</a>
             </li>                
             <li className="nav-item">
