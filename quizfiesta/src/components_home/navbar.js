@@ -1,4 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 function Navbar() {
+  const navigate = useNavigate();
     return(
         <div>
         <nav className="navbar navbar-expand-md" style={{ paddingLeft: '2%',backgroundColor:"rgb(0, 138, 138)",borderBottom:"15px solid #ee4b00"}}>
@@ -14,16 +16,16 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav  ms-auto">
             <li className="nav-item">
-              <a className="nav-link " style={{ textAlign: 'left',fontSize: '14px' }}href="#">Quiz Section</a>
+            <button onClick={() => navigate('/home')} style={{ textAlign: 'left', fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer',color:'white'}}>QuizSection</button>
             </li>
             <li className="nav-item">
-              <a className="nav-link " style={{ textAlign: 'left',fontSize: '14px' }}href="#">About Quiz Fiesta</a>
+            <button onClick={() => navigate('/home')} style={{ textAlign: 'left', fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer',color:'white'}}>About QuizFiesta</button>
             </li>                
             <li className="nav-item">
-              <a className="nav-link" style={{ textAlign: 'left',fontSize: '14px'}} href="#">Login/Register</a>
+            <button onClick={() => navigate('/login')} style={{ textAlign: 'left', fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer',color:'white'}}>Login</button>
             </li>
             <li className="nav-item">
-              <a className="nav-link" style={{ textAlign: 'left',fontSize: '14px'}} href="#">Home</a>
+            <button onClick={() => navigate('/home')} style={{ textAlign: 'left', fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer'}}>Home</button>
             </li>
             </ul>
           </div>
