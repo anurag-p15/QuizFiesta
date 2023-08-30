@@ -5,7 +5,7 @@ function Navbar() {
         <div>
         <nav className="navbar navbar-expand-md" style={{ paddingLeft: '2%',backgroundColor:"rgb(0, 138, 138)",borderBottom:"15px solid #ee4b00"}}>
       <div className="container-fluid all-show ">
-    <a className="navbar-brand" href="#"><img src="./title.png" style={{width:"100%",height:"100%",}}/></a>
+    <a className="navbar-brand" href="#"><img src="title.png" style={{width:"100%",height:"100%"}}/></a>
     <section className="wrapper">
       <nav className="navbar navbar-expand-md ">
         <div className="container-fluid ">
