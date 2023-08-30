@@ -1,15 +1,13 @@
-.text-login{
-	backdrop-filter: blur(25px) saturate(34%);
-    -webkit-backdrop-filter: blur(25px) saturate(34%);
-    background-color: rgba(17, 35, 40, 0.31);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    margin: 2% 5%;
-	padding: 2% 5%;
-    width:100%;
-    height:fit-content;
-    float:left;
-}
+.image {
+	flex: 1;
+	padding: 20px;
+  }
+  
+  .image img {
+	max-width: 100%;
+	height: auto;
+  }
+  
 .login-box{
 	width:100%;
 	margin:auto;
