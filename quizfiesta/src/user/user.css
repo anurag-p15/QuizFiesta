@@ -1,0 +1,94 @@
+.box,.box_selected{
+    width:18%;
+    color: white;
+    border-radius: 2em;
+    margin-top:5%;
+    margin-left:5%;
+    margin-bottom:2%;
+    height:30vh;
+    padding:2%;
+}
+.box{
+    background-color: rgb(78, 78, 78);
+}
+.box_selected{
+    background-color: rgb(0, 181, 21);
+}
+@media(max-width:1200px){
+    .box, .box_selected{
+        height:50vh;
+    }
+}
+@media(max-width:1000px){
+    .box, .box_selected{
+        width: 80%;
+        height:20vh;
+    }
+}
+@media(max-width:400px){
+    .box, .box_selected{
+        height:40vh;
+    }
+}
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 2% 5%;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #3399FF;
+    color: white;
+  }
+  h2,h4{
+    text-align: center;
+  }
+  .personal-dashboard {
+    color:white;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.user-info, .password-change {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ff9900e8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #0d00ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.password-change>button{
+    padding: 10px 20px;
+}

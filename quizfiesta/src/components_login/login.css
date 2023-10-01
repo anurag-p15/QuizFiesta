@@ -9,10 +9,11 @@
   }
   
 .login-box{
+	padding-bottom: 5%;
 	width:100%;
 	margin:auto;
 	max-width:525px;
-	min-height:670px;
+	height: 850px;
 	position:relative;
 }
 .login-snip{

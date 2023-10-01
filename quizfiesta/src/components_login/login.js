@@ -32,9 +32,13 @@ function LoginForm () {
                     </div>
                   </div>
                   <div className="sign-up-form">
+                  <div className="group">
+                      <label htmlFor="user" className="label">Enter your Name</label>
+                      <input id="username" type="text" className="input" placeholder="Enter your username" />
+                    </div>
                     <div className="group">
-                      <label htmlFor="user" className="label">Username</label>
-                      <input id="user" type="text" className="input" placeholder="Create your Username" />
+                      <label htmlFor="pass" className="label">Email Address</label>
+                      <input id="pass" type="text" className="input" placeholder="Enter your email address" />
                     </div>
                     <div className="group">
                       <label htmlFor="pass" className="label">Password</label>
@@ -45,8 +49,8 @@ function LoginForm () {
                       <input id="pass" type="password" className="input" data-type="password" placeholder="Repeat your password" />
                     </div>
                     <div className="group">
-                      <label htmlFor="pass" className="label">Email Address</label>
-                      <input id="pass" type="text" className="input" placeholder="Enter your email address" />
+                      <label htmlFor="user" className="label">Tell us about yourself</label>
+                      <input id="bio" type="text" className="input" placeholder="Describe yourself" />
                     </div>
                     <div className="group">
                       <input type="submit" className="button" value="Sign Up" />
