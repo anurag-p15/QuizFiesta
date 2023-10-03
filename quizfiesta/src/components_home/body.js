@@ -48,7 +48,7 @@ function Body(){
                         Whether aiming for excellence or broadening horizons, our quizzes offer an engaging learning platform. Delve in, 
                         test your knowledge, and uncover insights – all while growing with us.</p>
                           </div>
-                          <a href="#" className="btn d-block mx-auto" style={{width:'fit-content',backgroundColor:'#1100ff',boxShadow: 'none',color:'white'}}>Go to Quiz Section</a>
+                          <a href="/quiz" className="btn d-block mx-auto" style={{width:'fit-content',backgroundColor:'#1100ff',boxShadow: 'none',color:'white'}}>Go to Quiz Section</a>
                 </div>
         </div>
         <div className="row" style={{margin:'2% 5%',backgroundColor:'#ff7300',borderRadius:'10vh'}}>
