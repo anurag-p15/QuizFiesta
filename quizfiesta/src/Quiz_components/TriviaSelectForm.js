@@ -5,6 +5,7 @@ import categoriesData from './categories.json';
 import FinalScorePage from './FinalScorePage';
 import Navbar from '../components_home/navbar';
 import './quiz.css';
+import Footer from '../components_home/footer';
 
 const decodeHtmlEntities = (html) => {
   var txt = document.createElement('textarea');
@@ -102,6 +103,7 @@ const TriviaSelectForm = () => {
         </select>
         {/* <h1>hello world</h1> */}
       </div>
+      <Footer/>
       </div>
     );
   }
