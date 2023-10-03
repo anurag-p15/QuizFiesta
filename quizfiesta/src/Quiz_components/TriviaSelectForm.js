@@ -14,6 +14,10 @@ const decodeHtmlEntities = (html) => {
 };
 
 const TriviaSelectForm = () => {
+  useEffect(() => {
+    // Set the title for the Home page
+    document.title = 'Quiz Section:Attempt Quizzes!! ';
+  }, []);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -165,6 +169,7 @@ const TriviaSelectForm = () => {
       </button>
       </div>
       </div>
+      <Footer/>
     </div>
   );
 };
