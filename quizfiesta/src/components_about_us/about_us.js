@@ -5,7 +5,7 @@ import About_Content from "./about_content";
 function About(){
     useEffect(() => {
         // Set the title for the Home page
-        document.title = 'About Us';
+        document.title = 'About QuizFiesta';
       }, []);
     return(
     <div>
