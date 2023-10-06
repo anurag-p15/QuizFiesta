@@ -38,7 +38,7 @@ select {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: blanchedalmond;
     color: #333;
     width: 70em;
     /* You can add more styles as needed */
@@ -84,7 +84,7 @@ select option:checked {
 }
 
 /* Base Button Styles */
-.categorySelect>button,.question>button {
+.categorySelect>button,.question>button,.finalScoreContent>button{
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;

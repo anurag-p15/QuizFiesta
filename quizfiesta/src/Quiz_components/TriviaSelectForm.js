@@ -48,7 +48,7 @@ const TriviaSelectForm = () => {
 
   const fetchQuestions = async () => {
     try {
-      const response = await axios.get(`https://opentdb.com/api.php?amount=10&category=${selectedCategory}`);
+      const response = await axios.get(`https://opentdb.com/api.php?amount=11&category=${selectedCategory}`);
       const updatedQuestions = response.data.results.map((question) => ({
         ...question,
         options: [...question.incorrect_answers, question.correct_answer].sort(() => Math.random() - 0.5),
@@ -81,7 +81,7 @@ const TriviaSelectForm = () => {
 
   const handleNextQuestion = () => {
     // Move to the next question
-    if (currentQuestionIndex < 9) {
+    if (currentQuestionIndex < 10) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setSelectedAnswer(null); // Reset selected answer for the next question
       setIsAnswerCorrect(null); // Reset answer correctness for the next question
@@ -90,7 +90,6 @@ const TriviaSelectForm = () => {
   };
 
   const currentQuestion = questions[currentQuestionIndex];
-
   if (!currentQuestion) {
     return (
       <div>
@@ -116,7 +115,7 @@ const TriviaSelectForm = () => {
   const decodedOptions = currentQuestion.options.map((option) => decodeHtmlEntities(option));
   const decodedCorrectAnswer = decodeHtmlEntities(currentQuestion.correct_answer);
 
-  if (currentQuestionIndex === 9) {
+  if (currentQuestionIndex === 10) {
     return <FinalScorePage score={score} onRestartQuiz={handleRestartQuiz} onReselection = {categoryReselect}/>;
   }
 
@@ -138,7 +137,7 @@ const TriviaSelectForm = () => {
       )}
       <ul>
         {decodedOptions.map((option, index) => (
-          <li key={index}>
+          <li key={index} style={{listStyleType:'none'}}>
             <label>
               <input
                 type="radio"
@@ -151,7 +150,7 @@ const TriviaSelectForm = () => {
             </label>
           </li>
         ))}
-        <li key="correct">
+        {/* <li key="correct">
           <label>
             <input
               type="radio"
@@ -162,7 +161,7 @@ const TriviaSelectForm = () => {
             />
             {decodedCorrectAnswer}
           </label>
-        </li>
+        </li> */}
       </ul>
       <button onClick={handleNextQuestion} disabled={!hasAnswered}>
         Next Question
