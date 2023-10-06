@@ -3,9 +3,10 @@ function Navbar() {
   const navigate = useNavigate();
     return(
         <div>
-        <nav className="navbar navbar-expand-md" style={{ paddingLeft: '2%',backgroundColor:"rgb(0, 127, 125)",borderBottom:"15px solid #ee4b00"}}>
+        <nav className="navbar navbar-expand-md" style={{ paddingLeft: '2%',backgroundColor:"rgb(7, 56, 99)",borderBottom:"15px solid #ee4b00"}}>
       <div className="container-fluid all-show ">
-    <a className="navbar-brand" href="#"><img src="title.png" style={{width:"100%",height:"100%"}}/></a> 
+    <a className="navbar-brand" href="#"><img src="https://drive.google.com/uc?id=1LowyOYz1SB7riF__KMAudWtk-uDsKsMz" style={{width:"20%",height:"20%"}}/></a> 
+    
     <section className="wrapper">
       <nav className="navbar navbar-expand-md ">
         <div className="container-fluid ">
