@@ -19,7 +19,7 @@ function Navbar() {
             <button onClick={() => navigate('/quiz')} style={{ textAlign: 'left', fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer',color:'white'}}>QuizSection</button>
             </li>
             <li className="nav-item">
-            <button onClick={() => navigate('/home')} style={{ textAlign: 'left', fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer',color:'white'}}>About QuizFiesta</button>
+            <button onClick={() => navigate('/about')} style={{ textAlign: 'left', fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer',color:'white'}}>About QuizFiesta</button>
             </li>                
             <li className="nav-item">
             <button onClick={() => navigate('/login')} style={{ textAlign: 'left', fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer',color:'white'}}>Login</button>
