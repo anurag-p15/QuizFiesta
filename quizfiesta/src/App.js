@@ -1,6 +1,7 @@
 import Login from "./components_login/login_main";
 import Home from "./components_home/home";
 import User from "./user/user_profile";
+import About from "./components_about_us/about_us";
 import UserAttempt from "./user/user_attempted";
 import {BrowserRouter, Routes,Route} from 'react-router-dom'
 import TriviaSelectForm from "./Quiz_components/TriviaSelectForm";
@@ -10,6 +11,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
+        <Route path="/about" element={<About/>} />
         <Route path="/home" element={<Home/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/user_profile" element={<User/>} />
