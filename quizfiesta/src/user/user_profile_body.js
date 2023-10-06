@@ -29,7 +29,7 @@ function User_body(){
                 </a>
             </div>
             <div className="box">
-            <a href="/attempt_quiz" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <a href="/quiz" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div>
                     <h5 style={{fontSize:'26px',fontWeight:'600'}}>
                     Attempt a Quiz
