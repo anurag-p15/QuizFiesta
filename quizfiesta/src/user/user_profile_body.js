@@ -67,26 +67,34 @@ function User_body(){
         </div>
 
         {/* Profile Dashboard of User */}
-        <div className="personal-dashboard">
-            <h2>Personal Dashboard</h2>
-            <div className="user-info">
-                <h4>Name: {name}</h4>
-                <h4>Email: {email}</h4>
-                <h4>Bio:</h4>
-                <p>{bio}</p>
-            </div>
-            <div className="password-change">
-                <h4>Change Password</h4>
-                <input
-                    type="password"
-                    placeholder="New Password"
-                    value={password}
-                    onChange={handlePasswordChange}
-                />
-                <button onClick={savePassword}>Save Password</button>
-            </div>
+    <div className="leadership">
+    <div className="row">
+      <div className="head-values" style={{color:"black"}}>
+        <h4>Your Profile</h4>
+      </div>
+      <div className="note" style={{color:"black"}}>
+        <p>Your profile is always safe with us at QuizFiesta!! Have a look at your details you have filled and if needed you can update them</p>
+      </div>
+        <div className="leader">
+        <div className="leader-image">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/User_font_awesome.svg/1024px-User_font_awesome.svg.png" alt="leader name"/>
         </div>
+        <div className="leader-note">
+          <div style={{borderBottom:'3px solid rgb(5, 112, 78)'}}>
+            <h5>Name: </h5>
+          </div>
+          <div><h5>Email Id: </h5>
+          </div>
+          <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra, nunc quis suscipit dapibus, massa velit 
+            vulputate lacus, vitae posuere mauris massa vel magna. Proin posuere placerat diam vitae imperdiet. Donec euismod justo sit amet
+             dui viverra sodales. Donec at mauris finibus, rutrum tortor in, ullamcorper libero. Vestibulum vitae velit quis neque cursus cursus. 
+             Etiam convallis, massa eu iaculis lobortis, lorem ex fringilla orci, venenatis finibus diam leo vel nisi. Vestibulum eleifend ipsum 
+             enim.</p>
         </div>
+      </div>
+      </div>
+      </div>
+      </div>
     )
 }
 export default User_body
