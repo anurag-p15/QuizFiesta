@@ -4,6 +4,7 @@ import'./components_home/home.css';
 import './components_login/login.css';
 import './components_about_us/about_us.css';
 import App from './App';
+import './user/quizform.css';
 import './user/user.css'
 import reportWebVitals from './reportWebVitals';
 
