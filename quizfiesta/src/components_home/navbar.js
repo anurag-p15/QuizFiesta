@@ -17,16 +17,16 @@ function Navbar() {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ms-auto">
           <li className="nav-item">
-            <button onClick={() => navigate('/quiz')} style={{ fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer', color: 'white', textAlign: 'left', display: 'flex', alignItems: 'center',marginTop:'10%' }}>QuizSection</button>
+            <button onClick={() => navigate('/quiz')} style={{ fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer', color: 'white', textAlign: 'left', display: 'flex', alignItems: 'center' }}>QuizSection</button>
           </li>
           <li className="nav-item">
-            <button onClick={() => navigate('/about')} style={{ fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer', color: 'white', textAlign: 'left', display: 'flex', alignItems: 'center',marginTop:'8%' }}>About QuizFiesta</button>
+            <button onClick={() => navigate('/about')} style={{ fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer', color: 'white', textAlign: 'left', display: 'flex', alignItems: 'center' }}>About QuizFiesta</button>
           </li>
           <li className="nav-item">
-            <button onClick={() => navigate('/login')} style={{ fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer', color: 'white', textAlign: 'left', display: 'flex', alignItems: 'center',marginTop:'17%' }}>Login</button>
+            <button onClick={() => navigate('/login')} style={{ fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer', color: 'white', textAlign: 'left', display: 'flex', alignItems: 'center'}}>Login</button>
           </li>
           <li className="nav-item">
-            <button onClick={() => navigate('/home')} style={{ fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer', textAlign: 'left', display: 'flex', alignItems: 'center',marginTop:'17%' }}>Home</button>
+            <button onClick={() => navigate('/home')} style={{ fontSize: '14px', backgroundColor: 'transparent', border: 'none', cursor: 'pointer', textAlign: 'left', display: 'flex', alignItems: 'center'}}>Home</button>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" style={{ fontSize: '16px', textAlign: 'left' }} href="#" id="accountsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">My Account</a>

@@ -6,6 +6,7 @@ import UserAttempt from "./user/user_attempted";
 import Register from "./components_login/register_main";
 import {BrowserRouter, Routes,Route} from 'react-router-dom'
 import TriviaSelectForm from "./Quiz_components/TriviaSelectForm";
+import CreateQuiz from "./user/user_create_quiz";
 function App() {
   return (
     <div>
@@ -17,7 +18,7 @@ function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
         <Route path="/user_profile" element={<User/>} />
-        <Route path="/user_create_quiz" element={<User/>} />
+        <Route path="/user_create_quiz" element={<CreateQuiz/>} />
         <Route path="/attempt_quiz" element={<TriviaSelectForm/>} />
         <Route path="/user_attempt_quiz" element={<UserAttempt/>} />
         <Route path="/quiz" element={<TriviaSelectForm />} />
