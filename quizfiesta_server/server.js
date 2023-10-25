@@ -2,7 +2,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const authRoutes = require('./routes/registry');
+const regRoutes = require('./routes/registry');
+const authRoutes=require('./routes/auth');
 
 const app = express();
 app.use(cors());
@@ -24,7 +25,8 @@ db.once('open', () => {
 });
 
 // Use the '/api/auth' route for adding new user
-app.use('/api/registry/register', authRoutes);
+app.use('/api/registry/register', regRoutes);
+app.use('/api/auth/login', authRoutes);
 
 
 app.listen(port, () => {
