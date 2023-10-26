@@ -18,7 +18,24 @@ function LoginForm(){
         try {
           const response = await axios.post('http://localhost:5000/api/auth/login', formData);
           console.log(response.data);
-          window.location.href = '/user_profile';;
+          sessionStorage.setItem('lusername',formData.username);
+          sessionStorage.setItem('lname',formData.name);
+          sessionStorage.setItem('lpassword',formData.password);
+          const response_1 = await axios.get('http://localhost:5000/api/bio/login' ,{
+            params: {
+              lusername: sessionStorage.getItem('lusername'),
+            },
+          });
+          if (response_1.status === 200) {
+            // If the request is successful
+            console.log('User bio:', response_1.data.bio);
+           sessionStorage.setItem( 'bio', response_1.data.bio);
+          } else {
+            // If the request is not successful
+            console.error('Failed to fetch user bio');
+            // Handle the error condition, e.g., show an error message to the user
+          }
+          window.location.href = '/user_profile';
         } catch (error) {
           console.log(error);
           if (error.response) {
