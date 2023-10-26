@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
 function User_body(){
-    const [name, setName] = useState('John Doe'); // Replace with user's actual name
-    const [email, setEmail] = useState('john@example.com'); // Replace with user's actual email
-    const [bio, setBio] = useState('This is my bio.'); // Replace with user's actual bio
-    const [password, setPassword] = useState('');
-
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-    };
-
-    const savePassword = () => {
-        // TODO: Implement password change logic here
-        alert('Password changed successfully.');
-    };
+   const uusername=sessionStorage.getItem('lusername');
+   const uname=sessionStorage.getItem('lname');
+   const upass=sessionStorage.getItem('lpassword');
+   const bio_1=sessionStorage.getItem('bio');
     return(
         <div>
            <div className="row">
@@ -81,15 +72,11 @@ function User_body(){
         </div>
         <div className="leader-note">
           <div style={{borderBottom:'3px solid rgb(5, 112, 78)'}}>
-            <h5>Name: </h5>
+            <h5><b>Name:</b>  {uname}</h5>
           </div>
-          <div><h5>Email Id: </h5>
+          <div><h5><b>Email Id:</b>  {uusername} </h5>
           </div>
-          <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra, nunc quis suscipit dapibus, massa velit 
-            vulputate lacus, vitae posuere mauris massa vel magna. Proin posuere placerat diam vitae imperdiet. Donec euismod justo sit amet
-             dui viverra sodales. Donec at mauris finibus, rutrum tortor in, ullamcorper libero. Vestibulum vitae velit quis neque cursus cursus. 
-             Etiam convallis, massa eu iaculis lobortis, lorem ex fringilla orci, venenatis finibus diam leo vel nisi. Vestibulum eleifend ipsum 
-             enim.</p>
+          <p>Bio: {bio_1}</p>
         </div>
       </div>
       </div>

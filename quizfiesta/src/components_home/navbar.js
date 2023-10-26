@@ -1,6 +1,17 @@
 import { useNavigate } from 'react-router-dom';
 function Navbar() {
   const navigate = useNavigate();
+  const handleLogout = () => {
+    // Clear session storage variables
+    sessionStorage.removeItem('lusername');
+    sessionStorage.removeItem('lname');
+    sessionStorage.removeItem('lpassword');
+    sessionStorage.removeItem('bio');
+    
+    // Redirect to the homepage or any desired page
+    navigate('/login');
+  };
+
     return(
         <div>
         <nav className="navbar navbar-expand-md" style={{ paddingLeft: '2%',backgroundColor:"rgb(7, 56, 99)",borderBottom:"15px solid #ee4b00"}}>
@@ -33,10 +44,10 @@ function Navbar() {
             <ul className="dropdown-menu" aria-labelledby="accountsDropdown" style={{ backgroundColor: "rgb(72, 169, 255)",padding:'5% 5%',margin:'0'}}>
               <li><a className="dropdown-item" href="/user_profile">
                 <span>Dashboard</span></a></li>
-              <li><a className="dropdown-item" href="/user_attempted_quiz" >Attempted Quiz</a></li>
+              <li><a className="dropdown-item" href="/user_attempt_quiz" >Attempted Quiz</a></li>
               <li><a className="dropdown-item" href="/attempt_quiz" >Attempt Quiz</a></li>
-              <li><a className="dropdown-item" href="/user_profile" >
-                <span>Logout</span></a></li>
+              <li><button className="dropdown-item" onClick={handleLogout} >
+                <span>Logout</span></button></li>
             </ul>
           </li>
         </ul>
