@@ -1,17 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Poppins&display=swap");
 
-.categorySelect {
+/* .categorySelect {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 87vh; /* This ensures the container takes the full height of the viewport. */
+    /* background-color: black;
+    color: white;
+    font-size: 44px;
+    font-family: 'Cinzel', serif;
+  } */ 
+
+  .pageContainer {
+    display: flex;
+    height: 40vh; /* This ensures the container takes the full height of the viewport. */
     background-color: black;
     color: white;
     font-size: 44px;
     font-family: 'Cinzel', serif;
   }
+  
+  .categorySelect {
+    width: 50%;
+    display: flex;
+    color: white;
+    font-size: 44px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 87vh;
+  }
+  
+  #categorySelect{
+    background-color: #EEA15A;
+    width: 50%;
+  }
+
+  #categorySelect option{
+    background-color: #F85162;
+    color: wheat;
+  }
+
+
+
+
+  .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 87vh;
+  }
+  
+  
+  
+  .content button {
+    background-color: #EEA15A;
+    width: 40vh;
+    height: 40px;
+    font-size: 2vh; /* Adjust the font size relative to the button width */
+    margin-bottom: 340px; /* Adjust the margin-top to move the button up */
+    color:black;
+  }
+  
+  .content button:hover {
+    background-color: coral;
+  }
+  
+  .content input{
+    width: 40vh;
+    height: 40px;
+    margin: auto;
+    font-size: 2vh
+  }
+
+  .rules{
+    color: black;
+    /* position: absolute; */
+    width: 35%;
+    margin:auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: coral;;
+    border-radius: 10px;
+    border-width: 30px;
+    border-color: #F85162;
+  
+    
+  }
+  
+
+  
   
 .quiz{
     display: flex;
