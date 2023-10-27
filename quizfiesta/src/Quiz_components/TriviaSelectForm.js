@@ -94,18 +94,42 @@ const TriviaSelectForm = () => {
     return (
       <div>
       <Navbar />
-      <div className ="categorySelect">
-        <label htmlFor="categorySelect">Select a category:</label>
-        <select id="categorySelect" onChange={handleCategoryChange} value={selectedCategory}>
-          <option value="">Categories</option>
-          {categoriesData.trivia_categories.map((category) => (
-            <option key={category.id} value={category.id}>
-              {category.name}
-            </option>
-          ))}
-        </select>
-        {/* <h1>hello world</h1> */}
+      <div className="pageContainer">
+          <div className="categorySelect">
+            <label htmlFor="categorySelect">Select a category:</label>
+            <select id="categorySelect" onChange={handleCategoryChange} value={selectedCategory}>
+              <option value="">Categories</option>
+              {categoriesData.trivia_categories.map((category) => (
+                <option key={category.id} value={category.id}>
+                  {category.name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="content">
+            {/* Your content for the right side */}
+            <h1>Attempt Personal Quiz</h1>
+            <form>
+
+              <input type="text" id="code" name="code" placeholder="Enter quiz code"></input><br></br>
+              <button type ="submit">Go Ahead</button>
+            </form>
+            
+          </div>
+    </div>
+    <div className="rules">
+      <h1>Rules</h1>
+      <div className='rulesContent'>
+      <ol>
+        <li>You cannot change your selected option once selected</li>
+        <li>You can skip a question without answering but it will affect your score</li>
+        <li>Each question has 1 point; correct answers earn points.</li>
+        <li>You cannot go back to any question</li>
+        <li>You can re-attempt the quiz once completed</li>
+    </ol>
       </div>
+    </div>
+
       <Footer/>
       </div>
     );
