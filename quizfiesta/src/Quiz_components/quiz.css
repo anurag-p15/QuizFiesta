@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Poppins&display=swap");
 
-/* .categorySelect {
+ /* .categorySelect {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,7 @@
     color: white;
     font-size: 44px;
     font-family: 'Cinzel', serif;
-  } */ 
+  }  */
 
   .pageContainer {
     display: flex;
@@ -94,10 +94,7 @@
   
     
   }
-  
-
-  
-  
+   
 .quiz{
     display: flex;
     flex-direction: column;
