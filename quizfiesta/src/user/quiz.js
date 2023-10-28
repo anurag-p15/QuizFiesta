@@ -30,23 +30,39 @@ const QuizForm = () => {
             setSubmitVisible(true);
         }
     }
+      
 
         const submitQuiz = async () => {
+            const formattedQuestions = questions.map((userQuestion) => {
+                return {
+                  text: userQuestion.text, // Assuming userQuestion.text represents the question text
+                  type: userQuestion.type, // Assuming userQuestion.type represents the question type
+                  options: userQuestion.options, // Assuming userQuestion.options represents the answer options
+                  correctAnswer: userQuestion.correctAnswer, // Assuming userQuestion.correctAnswer represents the correct answer index
+                };
+              });
             // Prepare the data to send to the server
             const quizData = {
               code: quizCode, // Assuming quizCode is the 6-digit code entered by the user
-              questions: questions, // An array of questions you've collected
+              questions: formattedQuestions, // An array of questions you've collected
             };
+            const headers = {
+                'Content-Type': 'application/json',
+              };
 
             console.log(quizData);
 
-            await axios.post('http://localhost:5000/api/quiz_create/QuizForm', quizData)
+            await axios.post('http://localhost:5000/api/quiz_create/QuizForm', quizData, { headers })
     .then(response => {
       console.log(response.data);
+      alert('Quiz created successfully');
+      window.location.reload();
       // Optionally, you can reset the state or show a success message to the user.
     })
     .catch(error => {
       console.error(error);
+      alert('Error');
+    window.location.reload();
       // Handle errors here
     });
 }
