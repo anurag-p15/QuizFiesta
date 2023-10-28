@@ -162,16 +162,17 @@ const TriviaSelectForm = () => {
       <ul>
         {decodedOptions.map((option, index) => (
           <li key={index} style={{listStyleType:'none'}}>
-            <label>
-              <input
+            <div className='row'>
+              <div className='col-sm-2'>
+              <input style={{width:'40%'}}
                 type="radio"
                 value={option}
                 checked={selectedAnswer === option}
                 onChange={() => handleAnswerSelect(option)}
                 disabled={hasAnswered}
-              />
-              {option}
-            </label>
+              /></div>
+              <div className='col-sm-10'>{option}</div>
+            </div>
           </li>
         ))}
         {/* <li key="correct">

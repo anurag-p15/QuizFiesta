@@ -5,6 +5,7 @@ const cors = require('cors');
 const regRoutes = require('./routes/registry');
 const authRoutes=require('./routes/auth');
 const bioRoutes = require('./routes/bio');
+const createRoutes = require('./routes/quiz_create');
 const app = express();
 app.use(cors());
 app.use(express.json()); // Use the built-in express.json() middleware for parsing JSON
@@ -25,6 +26,7 @@ db.once('open', () => {
 });
 
 // Use the '/api/auth' route for adding new user
+app.post('/api/quiz_create/QuizForm', createRoutes);
 app.use('/api/registry/register', regRoutes);
 app.use('/api/auth/login', authRoutes);
 app.use('/api/bio/login', bioRoutes);

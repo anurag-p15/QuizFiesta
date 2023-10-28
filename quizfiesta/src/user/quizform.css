@@ -19,11 +19,11 @@ html{
     border-radius: 5px;
 }
 
-label {
+.quiz-form>label {
     display: block;
     margin: 5px 0;
 }
-input, select {
+.quiz-form>input,select {
     width: 100%;
     padding: 5px;
     border: 1px solid #bdc3c7;
