@@ -140,7 +140,7 @@ const TriviaSelectForm = () => {
   const decodedCorrectAnswer = decodeHtmlEntities(currentQuestion.correct_answer);
 
   if (currentQuestionIndex === 10) {
-    return <FinalScorePage score={score} onRestartQuiz={handleRestartQuiz} onReselection = {categoryReselect}/>;
+    return <FinalScorePage score={score} category = {selectedCategory} onRestartQuiz={handleRestartQuiz} onReselection = {categoryReselect}/>;
   }
 
   return (
