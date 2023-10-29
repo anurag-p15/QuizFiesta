@@ -94,9 +94,9 @@ function Attempt(){
                 <thead>
                     <tr>
                         {/* <th>Quiz Id</th> */}
-                        <th>category</th>
+                        <th>Catergory id</th>
                         {/* <th>Date of Attempt</th> */}
-                        <th>score</th>
+                        <th>Score</th>
                         {/* <th>Total Marks</th> */}
                         <th>Username</th>
                     </tr>
