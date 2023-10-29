@@ -6,6 +6,7 @@ import FinalScorePage from './FinalScorePage';
 import Navbar from '../components_home/navbar';
 import './quiz.css';
 import Footer from '../components_home/footer';
+import { useNavigate } from "react-router-dom";
 
 const decodeHtmlEntities = (html) => {
   var txt = document.createElement('textarea');
@@ -14,6 +15,8 @@ const decodeHtmlEntities = (html) => {
 };
 
 const TriviaSelectForm = () => {
+  const navigate = useNavigate();
+  
   useEffect(() => {
     // Set the title for the Home page
     document.title = 'Quiz Section:Attempt Quizzes!! ';
@@ -92,9 +95,9 @@ const TriviaSelectForm = () => {
   const currentQuestion = questions[currentQuestionIndex];
   if (!currentQuestion) {
     return (
-      <div>
-      <Navbar />
-      <div className="pageContainer">
+      <><div>
+        <Navbar />
+        <div className="pageContainer">
           <div className="categorySelect">
             <label htmlFor="categorySelect">Select a category:</label>
             <select id="categorySelect" onChange={handleCategoryChange} value={selectedCategory}>
@@ -109,29 +112,24 @@ const TriviaSelectForm = () => {
           <div className="content">
             {/* Your content for the right side */}
             <h1>Attempt Personal Quiz</h1>
-            <form>
-
-              <input type="text" id="code" name="code" placeholder="Enter quiz code"></input><br></br>
-              <button type ="submit">Go Ahead</button>
-            </form>
-            
+            <button onClick={() => navigate('/personal_quiz')}>Go Ahead to Personal Quiz</button>
           </div>
-    </div>
-    <div className="rules">
-      <h1>Rules</h1>
-      <div className='rulesContent'>
-      <ol>
-        <li>You cannot change your selected option once selected</li>
-        <li>You can skip a question without answering but it will affect your score</li>
-        <li>Each question has 1 point; correct answers earn points.</li>
-        <li>You cannot go back to any question</li>
-        <li>You can re-attempt the quiz once completed</li>
-    </ol>
-      </div>
-    </div>
-
-      <Footer/>
-      </div>
+        </div>
+      </div><div className="rules">
+          <h1>Rules</h1>
+          <div className='rulesContent'>
+            <ol>
+              <li>You cannot change your selected option once selected</li>
+              <li>You can skip a question without answering but it will affect your score</li>
+              <li>Each question has 1 point; correct answers earn points.</li>
+              <li>You cannot go back to any question</li>
+              <li>You can re-attempt the quiz once completed</li>
+            </ol>
+          </div>
+        </div>
+        <Footer />
+        </>
+      
     );
   }
 
