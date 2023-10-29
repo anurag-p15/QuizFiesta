@@ -90,23 +90,23 @@ function Attempt(){
     {/* Table displaying attempted Quiz */}
     <div>
             <h4>Check out your all Attempted Quizes</h4>
-            <table style ={{color: 'white'}}>
+            <table style ={{color: 'white',border:'2px solid white'}}>
                 <thead>
-                    <tr>
+                    <tr style={{ border:'2px solid white'}}>
                         {/* <th>Quiz Id</th> */}
-                        <th>category</th>
+                        <th style={{ border:'2px solid white'}}>category</th>
                         {/* <th>Date of Attempt</th> */}
                         <th>score</th>
                         {/* <th>Total Marks</th> */}
-                        <th>Username</th>
+                        <th style={{ border:'2px solid white'}}>Username</th>
                     </tr>
                 </thead>
                 <tbody>
                         {filteredData.map((item, index) => (
-                            <tr key={index}>
-                                <td>{item.category}</td>
-                                <td>{item.score}</td>
-                                <td>{item.username}</td>
+                            <tr style={{ border:'2px solid white'}} key={index}>
+                                <td style={{ border:'2px solid white'}}>{item.category}</td>
+                                <td style={{ border:'2px solid white'}}>{item.score}</td>
+                                <td style={{ border:'2px solid white'}}>{item.username}</td>
                             </tr>
                         ))}
                     </tbody>

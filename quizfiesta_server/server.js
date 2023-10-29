@@ -8,6 +8,9 @@ const bioRoutes = require('./routes/bio');
 const createRoutes = require('./routes/quiz_create');
 const scoreRoutes = require('./routes/test_score');
 const fetchRoutes = require('./routes/fetch_score');
+const personalQuizRoutes=require('./routes/quiz_search');
+const quizquestionsRoutes=require('./routes/quiz_questions');
+const personalscoreRoutes=require('./routes/test_score');
 const app = express();
 app.use(cors());
 app.use(express.json()); // Use the built-in express.json() middleware for parsing JSON
@@ -34,6 +37,9 @@ app.use('/api/auth/login', authRoutes);
 app.use('/api/bio/login', bioRoutes);
 app.use('/api/test_score/FinalScorePage', scoreRoutes);
 app.use('/api/fetch_score/attempt', fetchRoutes);
+app.use('/api/quiz_search/personal_quiz', personalQuizRoutes);
+app.use('/api/quiz_questions/personal_quiz', quizquestionsRoutes);
+app.use('/api/test_score/personal_quiz',personalscoreRoutes);
 
 
 // Add a new route to save the final score in the 'quiz_attempts' collection
