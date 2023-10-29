@@ -1,4 +1,39 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+
+
 function Attempt(){
+
+    const username = sessionStorage.getItem("lusername");
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+      // Fetch data from your MongoDB collection
+      axios.get('http://localhost:5000/api/fetch_score/attempt',{
+        params: {
+            username: username
+        }
+      }) // You should replace this with your backend API endpoint to fetch data
+        .then((response) => {
+            console.log(response.data);
+            console.log(username);
+          setData(response.data);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error('Error fetching data:', error);
+          setLoading(false);
+        });
+    }, []);
+
+    
+
+    //   const filteredData = data.filter((item) => item.username === username);
+    const filteredData = Array.isArray(data) ? data.filter((item) => item.username === username) : [];
+    console.log(filteredData);
+
     return(
         <div>
         <div className="row">
@@ -55,25 +90,26 @@ function Attempt(){
     {/* Table displaying attempted Quiz */}
     <div>
             <h4>Check out your all Attempted Quizes</h4>
-            <table>
+            <table style ={{color: 'white'}}>
                 <thead>
                     <tr>
-                        <th>Quiz Id</th>
-                        <th>Quiz Name</th>
-                        <th>Date of Attempt</th>
-                        <th>Marks Obtained</th>
-                        <th>Total Marks</th>
+                        {/* <th>Quiz Id</th> */}
+                        <th>category</th>
+                        {/* <th>Date of Attempt</th> */}
+                        <th>score</th>
+                        {/* <th>Total Marks</th> */}
+                        <th>Username</th>
                     </tr>
                 </thead>
                 <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                </tbody>
+                        {filteredData.map((item, index) => (
+                            <tr key={index}>
+                                <td>{item.category}</td>
+                                <td>{item.score}</td>
+                                <td>{item.username}</td>
+                            </tr>
+                        ))}
+                    </tbody>
             </table>
         </div>
      </div>
