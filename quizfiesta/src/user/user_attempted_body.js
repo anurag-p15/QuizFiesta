@@ -94,9 +94,8 @@ function Attempt(){
                 <thead>
                     <tr style={{ border:'2px solid white'}}>
                         {/* <th>Quiz Id</th> */}
-                        <th style={{ border:'2px solid white'}}>category</th>
 
-                        <th>Catergory id</th>
+                        <th style={{ border:'2px solid white'}}>Catergory id</th>
                         {/* <th>Date of Attempt</th> */}
                         <th>Score</th>
                         {/* <th>Total Marks</th> */}
