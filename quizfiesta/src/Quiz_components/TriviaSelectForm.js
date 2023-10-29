@@ -101,10 +101,10 @@ const TriviaSelectForm = () => {
           <div className="categorySelect">
             <label htmlFor="categorySelect">Select a category:</label>
             <select id="categorySelect" onChange={handleCategoryChange} value={selectedCategory}>
-              <option value="">Categories</option>
+              <option value="">ID: Category</option>
               {categoriesData.trivia_categories.map((category) => (
                 <option key={category.id} value={category.id}>
-                  {category.name}
+                  {category.id}: {category.name}
                 </option>
               ))}
             </select>
