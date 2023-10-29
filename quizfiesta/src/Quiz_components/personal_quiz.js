@@ -93,20 +93,20 @@ function Personal_Quiz() {
 
 
   // Use a useEffect hook to call sendQuizCompletionData when quizCompleted becomes true
-  // useEffect(() => {
-  //   if (quizCompleted) {
-  //     sendQuizCompletionData();
-  //     // Automatically reload the page after 5 seconds
-  //     const reloadTimer = setTimeout(() => {
-  //       window.location.reload();
-  //     }, 5000);
+  useEffect(() => {
+    if (quizCompleted) {
+      sendQuizCompletionData();
+      // Automatically reload the page after 5 seconds
+      const reloadTimer = setTimeout(() => {
+        window.location.reload();
+      }, 5000);
 
-  //     return () => {
-  //       // Clear the timer if the component unmounts before 5 seconds
-  //       clearTimeout(reloadTimer);
-  //     };
-  //   }
-  // }, [quizCompleted]);
+      return () => {
+        // Clear the timer if the component unmounts before 5 seconds
+        clearTimeout(reloadTimer);
+      };
+    }
+  }, [quizCompleted]);
 
   return (
     <>
