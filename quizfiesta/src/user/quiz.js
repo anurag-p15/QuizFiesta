@@ -136,7 +136,7 @@ const QuizForm = () => {
                     <div>
                         <label>Enter a 6-digit Quiz Code:</label>
                     <input type="text" value={quizCode} onChange={(e) => setQuizCode(e.target.value)} />
-                    <button className="submit-button" onClick={submitQuiz}>Submit Quiz</button>
+                    <button className="submit-button" style={{marginTop:'2%'}} onClick={submitQuiz}>Submit Quiz</button>
                 </div>
                 )}
             </div>

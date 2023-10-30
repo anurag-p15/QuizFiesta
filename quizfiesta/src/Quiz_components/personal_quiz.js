@@ -139,7 +139,7 @@ function Personal_Quiz() {
                 onChange={(e) => setQuizCode(e.target.value)}
               />
               <br />
-              <button style={{ backgroundColor: 'coral', color: 'black' }} type="submit">
+              <button style={{ backgroundColor: 'coral', color: 'black',marginTop:'2%' }} type="submit">
                 Attempt Quiz
               </button>
             </form>
