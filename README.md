@@ -20,6 +20,6 @@ User Dashboard-Create Quiz
 
 
 Made by:
-Anurag Pandey
-Raunak Mitra
-Himanshu Patil
+Anurag Pandey\
+Raunak Mitra\
+Himanshu Patil\
