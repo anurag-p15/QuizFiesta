@@ -19,7 +19,7 @@ User Dashboard-Create Quiz
 ![Screenshot 2023-11-23 162741](https://github.com/anurag-p15/QuizFiesta/assets/108535343/f33ffd28-9af8-4ddf-870c-f3bcc5ad64af)
 
 
-Made by:
+Made by:\
 Anurag Pandey\
 Raunak Mitra\
 Himanshu Patil
